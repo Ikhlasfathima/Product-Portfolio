@@ -1125,14 +1125,14 @@ textarea.ff-input{resize:none;height:80px;line-height:1.6}
         </div>
         <div class="c-card-arr">→</div>
       </a>
-      <a href="https://mail.google.com/mail/?view=cm&to=ikhlasfathima07@gmail.com" target="_blank" class="c-card">
+      <div class="c-card" id="emailCard" style="cursor:pointer" onclick="copyEmail()">
         <div class="c-card-icon">@</div>
         <div>
           <div class="c-card-t">Email</div>
-          <div class="c-card-s">Open to opportunities</div>
+          <div class="c-card-s" id="emailLabel">ikhlasfathima07@gmail.com</div>
         </div>
-        <div class="c-card-arr">→</div>
-      </a>
+        <div class="c-card-arr" id="emailArr">copy</div>
+      </div>
       <a href="#" class="c-card">
         <div class="c-card-icon">↓</div>
         <div>
@@ -1181,7 +1181,7 @@ textarea.ff-input{resize:none;height:80px;line-height:1.6}
       <div class="foot-socials">
         <a href="https://github.com/Ikhlasfathima" target="_blank" class="foot-social">GH</a>
         <a href="https://www.linkedin.com/in/ikhlas-fathima" target="_blank" class="foot-social">in</a>
-        <a href="https://mail.google.com/mail/?view=cm&to=ikhlasfathima07@gmail.com" target="_blank" class="foot-social">@</a>
+        <span class="foot-social" id="footEmailBtn" onclick="copyEmailFooter()" style="cursor:pointer" title="Copy email">@</span>
       </div>
     </div>
 
@@ -1428,6 +1428,24 @@ document.getElementById('ffSubmit')?.addEventListener('click',async function(){
   lbox?.addEventListener('click',e=>{if(e.target===lbox)closeLbox()});
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLbox()});
 })();
+
+/* ── COPY EMAIL ── */
+function copyEmail(){
+  navigator.clipboard.writeText('ikhlasfathima07@gmail.com').then(()=>{
+    const lbl=document.getElementById('emailLabel');
+    const arr=document.getElementById('emailArr');
+    lbl.textContent='Copied!';arr.textContent='✓';
+    setTimeout(()=>{lbl.textContent='ikhlasfathima07@gmail.com';arr.textContent='copy'},2000);
+  });
+}
+
+function copyEmailFooter(){
+  navigator.clipboard.writeText('ikhlasfathima07@gmail.com').then(()=>{
+    const btn=document.getElementById('footEmailBtn');
+    btn.textContent='✓';
+    setTimeout(()=>{btn.textContent='@'},2000);
+  });
+}
 
 /* ── STAT PILLS bounce on hover ── */
 document.querySelectorAll('.stat-pill').forEach(p=>{
