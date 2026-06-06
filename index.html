@@ -1125,7 +1125,7 @@ textarea.ff-input{resize:none;height:80px;line-height:1.6}
         </div>
         <div class="c-card-arr">→</div>
       </a>
-      <a href="mailto:ikhlasfathima@email.com" class="c-card">
+      <a href="mailto:ikhlasfathima07@gmail.com" class="c-card">
         <div class="c-card-icon">@</div>
         <div>
           <div class="c-card-t">Email</div>
@@ -1181,7 +1181,7 @@ textarea.ff-input{resize:none;height:80px;line-height:1.6}
       <div class="foot-socials">
         <a href="https://github.com/Ikhlasfathima" target="_blank" class="foot-social">GH</a>
         <a href="https://www.linkedin.com/in/ikhlas-fathima" target="_blank" class="foot-social">in</a>
-        <a href="mailto:ikhlasfathima@email.com" class="foot-social">@</a>
+        <a href="mailto:ikhlasfathima07@gmail.com" class="foot-social">@</a>
       </div>
     </div>
 
@@ -1212,7 +1212,7 @@ textarea.ff-input{resize:none;height:80px;line-height:1.6}
     <div class="foot-links">
       <a href="https://github.com/Ikhlasfathima" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/ikhlas-fathima" target="_blank">LinkedIn</a>
-      <a href="mailto:ikhlasfathima@email.com">Email</a>
+      <a href="mailto:ikhlasfathima07@gmail.com">Email</a>
     </div>
   </div>
 </footer>
@@ -1371,7 +1371,7 @@ document.getElementById('ffSubmit')?.addEventListener('click',async function(){
   try{
     // ⚠️ Replace YOUR_FORM_ID below with your actual Formspree form ID
     // Sign up free at formspree.io → New Form → copy the ID from the endpoint
-    const res=await fetch('https://formspree.io/f/xeewaogj',{
+    const res=await fetch('https://formspree.io/f/YOUR_FORM_ID',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({
@@ -1387,7 +1387,7 @@ document.getElementById('ffSubmit')?.addEventListener('click',async function(){
       document.getElementById('ffSuccess').classList.add('show');
     } else {
       btn.textContent='Try again →';btn.style.opacity='1';btn.style.pointerEvents='auto';
-      alert('Something went wrong. Please email me directly at ikhlasfathima@email.com');
+      alert('Something went wrong. Please email me directly at ikhlasfathima07@gmail.com');
     }
   }catch(e){
     btn.textContent='Try again →';btn.style.opacity='1';btn.style.pointerEvents='auto';
